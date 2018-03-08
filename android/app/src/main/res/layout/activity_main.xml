@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#e8e8e8"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.emuneee.tensorandflow.MainActivity">
+
+    <com.emuneee.tensorandflow.view.CanvasView
+        android:id="@+id/canvas"
+        android:background="#ffffff"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="350dp"
+        android:layout_height="350dp" />
+
+    <ImageView
+        android:id="@+id/scaledCanvas"
+        android:background="#ffffff"
+        android:scaleType="fitXY"
+        android:layout_alignStart="@+id/canvas"
+        android:layout_below="@+id/canvas"
+        android:layout_marginTop="25dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp" />
+
+    <TextView
+        android:text="Input"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:gravity="center_horizontal"
+        android:paddingTop="8dp"
+        android:layout_below="@+id/scaledCanvas"
+        android:layout_alignStart="@+id/scaledCanvas"
+        android:layout_alignEnd="@+id/scaledCanvas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        tools:text="1"
+        android:gravity="center"
+        android:textSize="56sp"
+        android:textColor="#000000"
+        android:id="@+id/prediction"
+        android:background="#ffffff"
+        android:scaleType="fitXY"
+        android:layout_alignEnd="@+id/canvas"
+        android:layout_below="@+id/canvas"
+        android:layout_marginTop="25dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp" />
+
+    <TextView
+        android:text="Prediction"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:gravity="center_horizontal"
+        android:paddingTop="8dp"
+        android:layout_below="@+id/prediction"
+        android:layout_alignStart="@+id/prediction"
+        android:layout_alignEnd="@+id/prediction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
